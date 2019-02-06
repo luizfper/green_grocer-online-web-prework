@@ -34,9 +34,9 @@ def apply_coupons(cart, coupons)
     if cart.keys.find(coupon[:item])
 
       if cart[coupon[:item]][:count]>=coupon[:num]
-        #binding.pry
+        binding.pry
         if cart.keys.find("#{coupon[:item]} W/COUPON")
-          binding.pry
+          # binding.pry
           cart["#{coupon[:item]} W/COUPON"][:count]+=1
         else
           cart[coupon[:item]][:count]-=coupon[:num]
